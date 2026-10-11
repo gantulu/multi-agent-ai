@@ -4,13 +4,6 @@
 **Versi:** 2.1
 **Tujuan:** Menyediakan kerangka prompt yang terstruktur, fleksibel, dan selaras dengan dokumentasi resmi pembuatan musik di aplikasi Gemini.
 
-## Riwayat versi
-
-- **Draft v1:** Referensi awal yang dikunci dan tidak diubah.
-- **Draft v2:** Master Prompt Template yang disetujui sebelumnya dan dipertahankan sebagai arsip.
-- **Draft v2.1:** Revisi berdasarkan audit dokumentasi resmi, dengan pemisahan prompt, modul lanjutan, dan pengaturan aplikasi.
-
-***
 
 # BAGIAN I — TUJUAN DAN PRINSIP
 
@@ -725,13 +718,10 @@ Dokumentasi aplikasi Gemini menjadi rujukan utama untuk alur dan kontrol aplikas
 
 ***
 
-# BAGIAN XII — STATUS VERSI
+# BAGIAN XII — TATA KELOLA VERSI
 
-## 25. Riwayat dan tata kelola dokumen
+## 25. Aturan pemeliharaan dokumen
 
-- **Draft v1:** tetap dikunci sebagai referensi awal.
-- **Draft v2:** dipertahankan sebagai versi arsip.
-- **Draft v2.1:** revisi berdasarkan hasil audit dokumentasi resmi dan rekomendasi terstruktur.
 - Revisi berikutnya harus dibahas terlebih dahulu sebelum diterapkan pada versi aktif.
 
 **Akhir dokumen — Gemini Create Music: Master Prompt Template v2.1**
