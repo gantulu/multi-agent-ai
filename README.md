@@ -1,65 +1,66 @@
 # Multi-Agent AI
 
-Repository terpusat untuk menyimpan, mendokumentasikan, dan mengembangkan berbagai AI Agent dengan spesialisasi, tanggung jawab, dan instruksi yang berbeda.
-
-## Agent Catalog
-
-| AI Agent | Fokus |
-|---|---|
-| [AI Product Consultant](agents/ai-product-consultant/README.md) | Analisis kebutuhan, strategi produk, requirement, dan evaluasi solusi. |
-| [AI Prompt Engineer](agents/ai-prompt-engineer/README.md) | Perancangan, evaluasi, dan optimasi prompt AI. |
-| [AI Researcher](agents/ai-researcher/README.md) | Riset, verifikasi sumber, analisis, dan sintesis informasi. |
-| [AI Coding Agent](agents/ai-coding-agent/README.md) | Implementasi, debugging, refactoring, dan verifikasi kode. |
-| [AI Skill Architect](agents/ai-skill-architect/README.md) | Perancangan dan pengembangan AI Skills serta integrasi agent. |
+Repository terpusat untuk mendefinisikan, mendokumentasikan, dan mengembangkan AI Agent modular dengan spesialisasi, tanggung jawab, dan kemampuan reusable.
 
 ## Quick Start
 
-Untuk menampilkan katalog dan memilih AI Agent melalui ChatGPT, gunakan satu instruksi:
+Gunakan instruksi berikut di ChatGPT:
 
 ```text
 Gunakan AI Agent dari repository gantulu/multi-agent-ai.
 ```
 
-ChatGPT akan membaca katalog dan dokumentasi agent melalui GitHub connector, menampilkan daftar agent, lalu meminta pengguna memilih. Setelah dipilih, dokumentasi agent digunakan sebagai panduan kerja dalam percakapan.
+Panduan: [docs/USAGE.md](docs/USAGE.md).
 
-Panduan lengkap: [Menggunakan AI Agent](docs/USAGE.md).
+## Agent Catalog
+
+| AI Agent | Fokus |
+|---|---|
+| [AI Product Consultant](agents/ai-product-consultant/README.md) | Analisis kebutuhan, strategi produk, requirement, evaluasi solusi. |
+| [AI Prompt Engineer](agents/ai-prompt-engineer/README.md) | Perancangan, evaluasi, dan optimasi prompt AI. |
+| [AI Researcher](agents/ai-researcher/README.md) | Riset, verifikasi sumber, analisis, sintesis informasi. |
+| [AI Coding Agent](agents/ai-coding-agent/README.md) | Implementasi, debugging, refactoring, verifikasi kode. |
+| [AI Skill Architect](agents/ai-skill-architect/README.md) | Perancangan AI Skills dan integrasi Agent. |
+
+Structured catalog: [registry/agents.json](registry/agents.json).
+
+## Architecture
+
+Arsitektur dibagi menjadi tujuh domain:
+
+1. Identity & Behavior
+2. Capabilities & Knowledge
+3. Execution & Orchestration
+4. Integration & Tools
+5. Governance & Security
+6. Monitoring & Evaluation
+7. Configuration & Deployment
+
+Baca [Architecture](docs/ARCHITECTURE.md) dan [Component Catalog](docs/COMPONENTS.md) untuk detail 48 komponen.
 
 ## Repository Structure
 
-```text
-multi-agent-ai/
-├── README.md
-├── agents/
-│   ├── ai-product-consultant/
-│   │   └── README.md
-│   ├── ai-prompt-engineer/
-│   │   └── README.md
-│   ├── ai-researcher/
-│   │   └── README.md
-│   ├── ai-coding-agent/
-│   │   └── README.md
-│   └── ai-skill-architect/
-│       └── README.md
-├── templates/
-│   └── agent-template/
-│       └── README.md
-└── docs/
-    └── CONTRIBUTING.md
-```
+- `agents/` — definisi Agent.
+- `instructions/` — instruksi sistem, perilaku, keamanan, dan standar kerja.
+- `skills/` — kemampuan reusable.
+- `workflows/` — proses kerja reusable.
+- `prompts/`, `context/` — prompt dan panduan konteks.
+- `knowledge/`, `memory/` — sumber pengetahuan dan kebijakan memori.
+- `orchestration/`, `tasks/` — koordinasi dan unit pekerjaan.
+- `tools/`, `integrations/` — kemampuan eksternal dan konektor.
+- `governance/` — kontrol keamanan dan persetujuan.
+- `observability/` — evaluasi, testing, dan pemantauan.
+- `configuration/`, `registry/`, `schemas/` — konfigurasi, katalog, dan kontrak data.
+- `templates/`, `docs/` — template dan dokumentasi.
 
-## Menambahkan Agent
+## Principles
 
-1. Buat folder baru di dalam `agents/` menggunakan nama yang deskriptif dan konsisten.
-2. Tambahkan `README.md` yang menjelaskan identitas, tujuan, ruang lingkup, instruksi, dan batasan agent.
-3. Gunakan [Agent Template](templates/agent-template/README.md) sebagai titik awal.
-4. Tambahkan agent baru ke tabel Agent Catalog di atas.
-
-## Prinsip
-
-- Satu direktori untuk satu AI Agent.
-- Setiap agent memiliki spesialisasi dan instruksi yang jelas.
-- Dokumentasi agent dikelola secara independen.
-- Hindari duplikasi tanggung jawab antar-agent.
+- Satu direktori untuk satu Agent, Skill, atau Workflow.
+- Komponen reusable direferensikan, bukan diduplikasi.
+- Setiap Agent memiliki scope, batasan, dan dependensi yang jelas.
+- Tindakan berdampak eksternal memerlukan otorisasi dan approval yang sesuai.
 - Catat asumsi, batasan, dan dependensi secara eksplisit.
 
-Lihat [Contributing Guide](docs/CONTRIBUTING.md) untuk aturan kontribusi.
+## Contributing
+
+Gunakan template di `templates/` dan ikuti [Contributing Guide](docs/CONTRIBUTING.md).
