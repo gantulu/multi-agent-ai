@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "gantulu/multi-agent-ai",
+  "agents": [
+    {"id":"ai-product-consultant","name":"AI Product Consultant","path":"agents/ai-product-consultant/README.md","description":"Analisis kebutuhan, strategi produk, requirement, dan evaluasi solusi.","status":"active","tags":["product","requirements","strategy"]},
+    {"id":"ai-prompt-engineer","name":"AI Prompt Engineer","path":"agents/ai-prompt-engineer/README.md","description":"Perancangan, evaluasi, dan optimasi prompt AI.","status":"active","tags":["prompt","llm","optimization"]},
+    {"id":"ai-researcher","name":"AI Researcher","path":"agents/ai-researcher/README.md","description":"Riset, verifikasi sumber, analisis, dan sintesis informasi.","status":"active","tags":["research","analysis","sources"]},
+    {"id":"ai-coding-agent","name":"AI Coding Agent","path":"agents/ai-coding-agent/README.md","description":"Implementasi, debugging, refactoring, dan verifikasi kode.","status":"active","tags":["coding","debugging","engineering"]},
+    {"id":"ai-skill-architect","name":"AI Skill Architect","path":"agents/ai-skill-architect/README.md","description":"Perancangan AI Skills dan integrasi Agent.","status":"active","tags":["skills","architecture","agents"]}
+  ]
+}
