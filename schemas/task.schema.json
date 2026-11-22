@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Task",
+  "type":"object",
+  "required":["id","objective","status"],
+  "properties":{
+    "id":{"type":"string"},
+    "objective":{"type":"string","minLength":1},
+    "status":{"type":"string","enum":["pending","planned","in_progress","blocked","completed","failed"]},
+    "agent_id":{"type":"string"},
+    "workflow_id":{"type":"string"},
+    "acceptance_criteria":{"type":"array","items":{"type":"string"}},
+    "subtasks":{"type":"array","items":{"type":"string"}}
+  },
+  "additionalProperties":false
+}
