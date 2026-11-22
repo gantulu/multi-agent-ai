@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gantulu/multi-agent-ai/blob/main/schemas/agent-registry.schema.json",
+  "title": "Agent Registry",
+  "description": "Top-level registry contract for discoverable AI Agents.",
+  "type": "object",
+  "required": ["schema_version", "repository", "agents"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "repository": {
+      "type": "string",
+      "const": "gantulu/multi-agent-ai"
+    },
+    "agents": {
+      "type": "array",
+      "items": {"$ref": "agent.schema.json"},
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}
