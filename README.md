@@ -12,6 +12,18 @@ Repository terpusat untuk menyimpan, mendokumentasikan, dan mengembangkan berbag
 | [AI Coding Agent](agents/ai-coding-agent/README.md) | Implementasi, debugging, refactoring, dan verifikasi kode. |
 | [AI Skill Architect](agents/ai-skill-architect/README.md) | Perancangan dan pengembangan AI Skills serta integrasi agent. |
 
+## Quick Start
+
+Untuk menampilkan katalog dan memilih AI Agent melalui ChatGPT, gunakan satu instruksi:
+
+```text
+Gunakan AI Agent dari repository gantulu/multi-agent-ai.
+```
+
+ChatGPT akan membaca katalog dan dokumentasi agent melalui GitHub connector, menampilkan daftar agent, lalu meminta pengguna memilih. Setelah dipilih, dokumentasi agent digunakan sebagai panduan kerja dalam percakapan.
+
+Panduan lengkap: [Menggunakan AI Agent](docs/USAGE.md).
+
 ## Repository Structure
 
 ```text
