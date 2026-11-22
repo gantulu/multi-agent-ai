@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Skill",
+  "type":"object",
+  "required":["id","name","description","path"],
+  "properties":{
+    "id":{"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "name":{"type":"string"},
+    "description":{"type":"string"},
+    "path":{"type":"string"},
+    "status":{"type":"string","enum":["draft","active","deprecated"]},
+    "tags":{"type":"array","items":{"type":"string"}}
+  },
+  "additionalProperties":false
+}
